@@ -1,35 +1,35 @@
-let movies = [
-    {
-        name:"falcon and the winter soldier",
-        des:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
-        image:"image/slider 2.png",
+// let movies = [
+//     {
+//         name:"falcon and the winter soldier",
+//         des:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
+//         image:"image/slider 2.png"
 
-    },
-    {
-        name:"Loki",
-        des:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
-        image:"image/slider 1.png",
+//     },
+//     {
+//         name:"Loki",
+//         des:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
+//         image:"image/slider 1.png"
 
-    },
-    {
-        name:"Wanda Vision",
-        des:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
-        image:"image/slider 3.png",
+//     },
+//     {
+//         name:"Wanda Vision",
+//         des:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
+//         image:"image/slider 3.png"
 
-    },
-    {
-        name:"Raya",
-        des:"Lorem ipsum dolor sit aet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
-        image:"image/slider 4.png",
+//     },
+//     {
+//         name:"Raya",
+//         des:"Lorem ipsum dolor sit aet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
+//         image:"image/slider 4.png"
 
-    },
-    {
-        name:"Luca",
-        des:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
-        image:"image/slider 5.png",
+//     },
+//     {
+//         name:"Luca",
+//         des:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nulla cupiditate inventore molestias dolor",
+//         image:"image/slider 5.png"
 
-    }
-];
+//     }
+// ]
 
 const carousel=document.querySelector('.carousel');
 let sliders=[];
@@ -38,7 +38,7 @@ let slideIndex=0;
 
 const createSlide = () => {
     if(slideIndex >= movies.length){
-        slideIndex=0;
+        slideIndex = 0;
     }
 //creating dom elements
     let slide = document.createElement('div');
@@ -72,7 +72,7 @@ sliders.push(slide);
 //adding slide effect
 
 if(sliders.length){
-    sliders[0].style.marginLeft ='calc(-${100 * (sliders.length - 2)}% - ${30 * (sliders.length - 2)}px)';
+    sliders[0].style.marginLeft = "calc(-${100 * (sliders.length - 2)}% - ${30 * (sliders.length - 2)}px)";
  }
 };
 

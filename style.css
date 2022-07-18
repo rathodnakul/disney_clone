@@ -13,11 +13,11 @@ body{
     width: 100%;
     height: 80PX;
     position: fixed;
-    margin-top: 0;
-    margin-left: 0;
+    top: 0;
+    left: 0;
     padding: 0 4%;
     background: #0c111b;
-    z-index: 9px;
+    z-index: 9;
     display: flex;
     align-items: center;
 }
@@ -211,6 +211,8 @@ body{
     overflow-x: auto;
     overflow-y: visible;
     scroll-behavior: smooth;
+
+    
 }
 .card-container::-webkit-scrollbar{
     display: none;
@@ -235,10 +237,12 @@ body{
 
 .card:hover{
      transform: scale(1.1);
+    
 }
 
 .card:hover .card-body{
     opacity: 1;
+   
 }
 .card-body{
     opacity: 0;
@@ -251,7 +255,11 @@ body{
     background: linear-gradient(to bottom, rgba(4,8,15,0),#192133 90%);
     padding: 10px;
     transition: 0.5s;
+    
 
+}
+.card-body h6{
+    color: #fff;
 }
 
 .name{
@@ -260,16 +268,48 @@ body{
     text-transform: capitalize;
     margin-top: 60%;
     font-weight: 500;
+    font-size: 10px;
 
 }
-.dis{
+.des{
     color: #fff;
     opacity: 0.8;
     margin: 5px 0;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 8px;
+}
+.play-btn{
+    font-size: 8px;
+    position: relative;
+    width: 100%;
+    text-transform: capitalize;
+    background:none;
+    border: none;
+    font-weight: 500;
+    text-align: right;
+    color: rgba(255,255,255,0.5);
+    margin: 5px 0px ;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+.play-btn::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 35px;
+    height: 23px;
+    width: 23px;
+    background-image: url(image/play.png);
+    background-size: cover;
+    transform: scale(0.4);
+}
+.play-btn:hover{
+    color: #fff;
+    background: rgba(255,255,255,0.1);
 }
 .watchlist-btn{
+    font-size: 8px;
     position: relative;
     width: 100%;
     text-transform: capitalize;
@@ -278,21 +318,21 @@ body{
     font-weight: 500;
     text-align: right;
     color: rgba(255,255,255,0.5);
-    margin: 5px 0;
+    margin: 0px  0px;
     cursor: pointer;
-    padding: 10px 5px;
-    border-radius: 5px;
+    padding: 5px 5px;
+    border-radius: 3px;
 
 }
 
 .watchlist-btn::before{
-    content: "";
+    content: '';
     position: absolute;
-    top: 0;
-    left: -5px;
-    height: 35px;
-    width: 35px;
-    background-image: url(images/add.png);
+    top: -2px;
+    left: 8px;
+    height: 25px;
+    width: 25px;
+    background-image: url(image/add.png);
     background-size: cover;
     transform: scale(0.4);
 }
